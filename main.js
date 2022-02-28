@@ -27,6 +27,13 @@ function modelLoaded() {
   video.volume(0);
 }
 
+function gotResult(error, results) {
+  if (error) {
+    console.log(error);
+  }
+  console.log(results);
+  objects = results;
+}
 
 function draw() {
   image(video, 0, 0, 480, 380);
@@ -49,9 +56,3 @@ function draw() {
   }
 }
 
-function gotResult(error, results) {
-  if (error) {
-    console.log(error);
-  }
-  console.log(results);
-}
